@@ -1,70 +1,36 @@
-# Getting Started with Create React App
+# 페이지 (기능 설계)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
 
-## Available Scripts
+- **게시글** (NOTE) 작성 → (*.html 파일)로 db에 저장가능하게
+    - WYSIWYG 에디터 사용
+    - 다양한 플러그인 존재
+    - 사용자 대충 끼워 넣기
 
-In the project directory, you can run:
+- **게시글** (NOTE) 조회 및 **cheet sheet** 만들기 → ( cheet sheet를 게시글을 이용해서 만들기 )
+    
+    > **Cheet Sheet**는 게시글(NOTE)을 모아 만든 하나의 **커리큘럼**이다.
+    > 
+    - 게시글을 Drag 해서 하나의 자료구조를 만드는데 아래와 같은 구조 고민
+        
+        [[JS] 📚 드래그 앤 드롭(Drag and Drop) 기능 이해 & 구현하기](https://inpa.tistory.com/entry/%EB%93%9C%EB%9E%98%EA%B7%B8-%EC%95%A4-%EB%93%9C%EB%A1%AD-Drag-Drop-%EA%B8%B0%EB%8A%A5)
+        
+        1. Directed Graph
+        2. Array
+        3. Linked List
+    - 게시글 조회는 검색 기능 구현
+        - 키워드
+        - 내용
+        - 작성자
+    
+- **cheet sheet 목록 페이지**
+    - Cheet Sheet 상세 페이지로 이동
+    - 내가 쓴 Cheet Sheet 보기 가능
 
-### `npm start`
+- **cheet sheet 상세 페이지**
+    - 제안 받은 Cheet Sheet 조회 기능
+    - 댓글 기능
+    - 수정 페이지로 이동
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **cheet sheet 수정 페이지**
+    - 다른 유저가 만든 Cheet Sheet 수정 제안 신청 하기
