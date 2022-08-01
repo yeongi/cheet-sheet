@@ -1,14 +1,13 @@
-import "./App.css";
-import Home from "./page/Home";
+import HomePage from "./page/HomePage";
 import { Routes, Route, Link } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <h1>프로젝트</h1>
       <h2>라우터 설정</h2>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<HomePage />} />
       </Routes>
     </div>
   );
