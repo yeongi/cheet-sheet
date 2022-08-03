@@ -1,0 +1,19 @@
+.home-wrapper {
+  border: 1px solid;
+  width: 1000px;
+  height: 1000px;
+  margin: 0 auto;
+}
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-around;
+}
+
+.wrapper article {
+  border: 1px solid;
+  width: 400px;
+  height: 500px;
+}

@@ -1,15 +1,11 @@
 import React, { useState } from "react";
-import ReactQuill from "react-quill";
+import ReactQuill, { Quill } from "react-quill";
 import "react-quill/dist/quill.snow.css";
 import parse from "html-react-parser";
 import classses from "./MyNote.module.css";
 
 const MyNote = () => {
   const [content, setContents] = useState("");
-
-  // const sendButtonHandler = (e) => {
-  //   console.log(content);
-  // };
 
   return (
     <div className={classses.wrapper}>

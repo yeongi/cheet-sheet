@@ -1,19 +1,22 @@
 import React from "react";
 import MyNote from "../component/note/MyNote";
+import classes from "./HomePage.module.css";
 
-const home = () => {
+const HomePage = () => {
   return (
-    <div>
-      <h1>homepage</h1>
-      <ul>
-        <li>치트시트 생성</li>
-        <li>게시글 작성</li>
-        <MyNote />
-        <li>치트시트 수정</li>
-        <li>알림 설정</li>
-      </ul>
+    <div className={classes["home-wrapper"]}>
+      <section className={classes.wrapper}>
+        <article>치트시트 생성</article>
+        <article>
+          <h3>게시글 작성</h3>
+          <hr />
+          <MyNote />
+        </article>
+        <article>치트시트 수정</article>
+        <article>알림 설정</article>
+      </section>
     </div>
   );
 };
 
-export default home;
+export default HomePage;
