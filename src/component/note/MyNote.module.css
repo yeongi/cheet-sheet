@@ -3,3 +3,9 @@
   width: 700px;
   height: 900px;
 }
+
+.note {
+  width: inherit;
+  height: 200px;
+  padding: 10px;
+}
