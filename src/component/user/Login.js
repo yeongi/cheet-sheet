@@ -1,6 +1,7 @@
 import { TextField, Button } from "@mui/material";
 import { Box } from "@mui/system";
 import React, { useState } from "react";
+import userHandler from "../../lib/handler/userHandler";
 
 const Login = () => {
   const [username, setName] = useState("");
@@ -14,15 +15,22 @@ const Login = () => {
     setPW(e.target.value);
   };
 
-  const submitHandler = (e) => {
+  const submitHandler = async (e) => {
     e.preventDefault();
 
-    console.log(username, password);
+    const result = await userHandler.login({
+      id: username,
+      pwd: password,
+    });
+
+    console.log(username, password, result);
   };
 
   return (
     <div>
-      <h1>로그인</h1>
+      <h1>
+        서비스를 이용하시려면 <br /> 로그인을 해야합니다.
+      </h1>
       <Box
         component="form"
         sx={{
