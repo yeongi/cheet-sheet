@@ -1,11 +1,10 @@
 .wrapper {
   text-align: center;
-  width: 700px;
-  height: 900px;
+  height: 600px;
 }
 
 .note {
-  width: inherit;
-  height: 200px;
+  width: 400px;
+  height: 500px;
   padding: 10px;
 }

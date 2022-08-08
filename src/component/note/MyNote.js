@@ -16,7 +16,7 @@ const MyNote = () => {
         placeholder="지금부터 써내려 가"
         className={classes.note}
       />
-      <p>{parse(content)}</p>
+      {/* <p>{parse(content)}</p> */}
     </div>
   );
 };
