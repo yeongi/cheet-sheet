@@ -2,8 +2,10 @@ import { TextField, Button } from "@mui/material";
 import { Box } from "@mui/system";
 import React, { useState } from "react";
 import userHandler from "../../lib/handler/userHandler";
+import { useDispatch } from "react-redux";
 
 const Login = () => {
+  const dispatch = useDispatch();
   const [username, setName] = useState("");
   const [password, setPW] = useState("");
 
@@ -23,6 +25,15 @@ const Login = () => {
       pwd: password,
     });
 
+    dispatch({
+      type: "LOGIN",
+      info: {
+        num: 1,
+        id: 1,
+        token: "token",
+        isLogin: true,
+      },
+    });
     console.log(username, password, result);
   };
 

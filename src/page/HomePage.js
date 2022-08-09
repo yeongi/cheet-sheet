@@ -9,31 +9,33 @@ import { Link } from "react-router-dom";
 import ReviseCheetSheet from "../component/cheetsheet/ReviseCheetSheet";
 import RecentCheetSheetList from "../component/cheetsheet/RecentCheetSheetList";
 import MyNoteDialog from "../component/note/MyNoteDialog";
+import { useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 
 const HomePage = () => {
-  const [isLoggedIn, setLogIn] = useState(false);
+  //로그인 상태 가져오기
+  const { isLogin } = useSelector((state) => state);
+  const dispatch = useDispatch();
 
   //로그인 상태 리덕스로 변경 하기
   const loginHandler = (e) => {
-    if (isLoggedIn) {
-      setLogIn(false);
-    } else {
-      setLogIn(true);
-    }
+    dispatch({
+      type: "LOGOUT",
+    });
   };
 
   return (
     <div className={classes["home-wrapper"]}>
       <Button onClick={loginHandler}>Login</Button>
       <section className={classes.wrapper}>
-        {!isLoggedIn && (
+        {!isLogin && (
           <article>
             <h3>로그인</h3>
             <hr />
             <Login />
           </article>
         )}
-        {isLoggedIn && (
+        {isLogin && (
           <>
             <article className={classes.note}>
               <h3>Taking notes</h3>

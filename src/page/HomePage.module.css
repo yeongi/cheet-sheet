@@ -1,5 +1,5 @@
 .home-wrapper {
-  width: 1800px;
+  width: 100%;
   height: auto;
   margin: 0 auto;
 }
@@ -16,7 +16,7 @@
 .wrapper article {
   text-align: center;
   border: rgb(116, 72, 116) 6px solid;
-  width: 300px;
+  width: 20rem;
   height: 400px;
   border-radius: 25px;
   padding: 10px;
